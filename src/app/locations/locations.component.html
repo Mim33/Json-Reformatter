@@ -1,0 +1,22 @@
+<h1>ATM locations</h1>
+<button id="export" class="exportBtn"></button>
+<!--<button id="export"  (click)="onClick()">Save</button>
+<button (click)="toggleJson()">Show New Json</button>
+<div *ngIf=isOpen id="openjson">
+
+</div>
+-->
+
+<div *ngFor="let location of locations | keys" class="location">
+  <div *ngFor="let test of location.value | keys">
+      <h2 *ngIf="test.key === 'id'"><span class="location_data" style="text-transform: capitalize; font-weight: bold;">{{test.key}}: </span> {{test.value}}</h2>
+  </div>
+  <div *ngFor="let test of location.value | keys">
+      <p *ngIf="test.key === 'place'"><span class="location_data" style="text-transform: capitalize; font-weight: bold;">{{test.key}}: </span> {{test.value}}</p>
+  </div>
+  <div *ngFor="let test of location.value | keys">
+      <p *ngIf="test.key === 'city'"><span class="location_data" style="text-transform: capitalize; font-weight: bold;">{{test.key}}: </span> {{test.value}}</p>
+    </div>
+  <div *ngFor="let test of location.value | keys">
+      <p *ngIf="test.key === 'address'"><span class="location_data" style="text-transform: capitalize; font-weight: bold;">{{test.key}}: </span> {{test.value}}</p>
+</div>
