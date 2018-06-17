@@ -30,6 +30,6 @@ export class DataService {
     return this.http.get("./assets/object.json");
 }
   getLocation(locationId){
-    return this.http.get('https://jsonplaceholder.typicode.com/'+ locationId);
+    return this.http.get('./assets/object.json'+ locationId);
   }
 }
